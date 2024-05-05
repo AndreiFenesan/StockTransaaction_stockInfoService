@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: stock-service
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+investing:
+  host: https://www.investing.com/equities/{0}
+  x-path: /html/body/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]
+  symbol-to-stock-name:
+    AAPL: apple-computer-inc
+    MSFT: microsoft-corp
+    AMZN: amazon-com-inc
+    GOOGL: google-inc
+    TSLA: tesla-motors
+    META: facebook-inc
+    BRKb: berkshire-hathaway-inc
+    JNJ: johnson-johnson
+    JPM: jp-morgan-chase
+    WMT: wal-mart-stores
+    V: visa-inc
+    PG: procter-gamble
+    BAC: bank-of-america
+    INTC: intel-corp
+    NVDA: nvidia-corp
+    DIS: disney
+    KO: coca-cola-co
